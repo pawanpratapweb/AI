@@ -1,7 +1,7 @@
 const brain = require("brain.js");
 const fs = require("fs");
 
-const net = new brain.NeuralNetwork();
+const net = new brain.recurrent.LSTM();
 
 const trainData = [
     {input: 'how are you', output: ('i am fine')},
@@ -13,13 +13,4 @@ const trainData = [
 net.train(trainData, {iterations: 20000, log:true});
 
 const json = net.toJSON();
-// console.log(JSON.stringify(json))
-fs.writeFile("net.json", JSON.stringify(json), () => {
-    console.log('data written')
-}) 
-
-// fs.readFile(__dirname + "/net.json", 'utf8', (err, data) => {
-//     net.fromJSON(JSON.parse(data));
-//     net.run('favourate company')
-//     // console.log(data);
-// })
+console.log(net.run("who are you"))
