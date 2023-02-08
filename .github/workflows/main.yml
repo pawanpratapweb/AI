@@ -15,3 +15,9 @@ jobs:
       - run: npm i gpu.js
       - run: npm i brain.js
       - run: node index.js
+      - name: Commiting Changes
+        run: |
+          git config --global user.name 'Pawna'
+          git config --global user.email 'pawanpratapweb@users.noreply.github.com'
+          git commit -am "Automated report"
+          git push
