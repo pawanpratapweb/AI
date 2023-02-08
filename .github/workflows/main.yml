@@ -17,7 +17,8 @@ jobs:
       - run: node index.js
       - name: Commiting Changes
         run: |
-          git config --global user.name 'Pawna'
+          git add network_state.json
+          git config --global user.name 'pawanpratapweb'
           git config --global user.email 'pawanpratapweb@users.noreply.github.com'
           git commit -am "Automated report"
           git push
