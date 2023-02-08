@@ -1,4 +1,5 @@
 const brain = require("brain.js");
+const fs = require("fs");
 const net = new brain.recurrent.LSTM();
 
 net.train(
@@ -814,5 +815,8 @@ net.train(
   ],
   { log: true, iterations: 50 }
 );
+
+const json = net.toJSON();
+fs.writeFileSync("network_state.json",  JSON.stringify(json), "utf-8");
 
 console.log(net.run("what is capital of india"));
