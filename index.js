@@ -5,7 +5,7 @@ const net = new brain.recurrent.LSTM();
 
 net.train(
   traindata,
-  { log: true, iterations: 50 }
+  { log: true, iterations: 200 }
 );
 
 const json = net.toJSON();
