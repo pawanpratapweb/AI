@@ -14,7 +14,7 @@ jobs:
       - run: npm init -y
       - run: npm i gpu.js
       - run: npm i brain.js
-      - run: node index.js
+      - run: node --max-old-space-size=7000 index.js
       - name: Commiting Changes
         run: |
           git add network_state.json
