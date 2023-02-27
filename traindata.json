@@ -353,5 +353,5 @@
 {"input": "I'm not too sorrowful", "output": 0.5},
 {"input": "I'm not too brokenhearted", "output": 0.5},
 {"input": "I'm not too moribund", "output": 0.5},
-{"input": "I'm not too forlorn", "output": 0.5},
+{"input": "I'm not too forlorn", "output": 0.5}
 ]
